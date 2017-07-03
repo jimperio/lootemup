@@ -13,7 +13,7 @@
 #sprite {
   height: 36px;
   width: 36px;
-  background: url(images/rpgcritters2.png);
+  background: url(../images/rpgcritters2.png);
   background-position: 39px 46px;
   margin: 15px auto;
 }
