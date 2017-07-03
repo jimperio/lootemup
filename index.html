@@ -1,0 +1,42 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+  <div id="app" tabindex="-1" @keyup="onKeyUp">
+    <main-window
+      id="main-window"
+      :enemy="enemy"
+    >
+    </main-window>
+    <messages
+      :messages="messages"
+    >
+    </messages>
+    <div id="status-bar">
+      <p-bar
+        class="hp-bar"
+        :curr="player.currentHP"
+        :max="player.maxHP"
+      >
+      </p-bar>
+      <p-bar
+        class="mp-bar"
+        :curr="player.currentMP"
+        :max="player.maxMP"
+      >
+      </p-bar>
+    </div>
+    <div id="skill-bar">
+  	  <skill-button
+  	    v-for="item in items"
+  	    :skill="item"
+        :perform-skill="performSkill.bind(null, item)"
+  	  >
+  	  </skill-button>
+	  </div>
+  </div>
+  <script type="text/javascript" src="../vue.js"></script>
+  <script type="text/javascript" src="../game.js"></script>
+</body>
+</html>
